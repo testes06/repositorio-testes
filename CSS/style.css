@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'fonte';
+    src: url("./Cinzel-SemiBold.ttf"); /*fonte baixada*/
+  }
+
+
+body{
+    background: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.video-background{
+
+    width: 100%;
+    min-height: 70vh;/*Assim ele se adapta de acordo com o dispositivo*/
+}
+
+.video {
+    position: fixed; 
+    opacity: 0.35;
+    z-index:-1;
+}
+
+.item-menu{
+    font-size: 1.2em;
+    padding-left: 25px;
+}
+
+.crescer::after{
+    content: " ";
+    width: 100%;
+    height: 4px;
+    background-color: crimson;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.crescer:hover::after{
+    width: 100%;
+}
+
+.principal{
+    position: absolute;
+    top: 10%;
+    font-size: 16px;
+    height: 500px; /*para caber na tela*/
+    display: flex; /*joga nossos elementos pro padrao em linha*/
+    flex-direction: column; /*transforma esse padrao em linha em colunas*/
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+.principal .descricao{
+    width: 50%;
+  
+}
+
+.titulo{
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 20px;
+}
+
+.botao{
+    background-color: rgba(151, 12, 58, 0.8);
+    border: none; /*ele vem com valor padrao, entao tenho q tirar*/
+    border-radius: 5px;
+    color: white;
+    padding: 15px;
+    margin-right: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 2s ease all; /*mudar cor suavement*/
+}
+
+.botao:hover{
+    background-color: white;
+    color: black; /*color sozinho é da fonte*/
+}
+
+.botao i{
+    margin-right: 5px;
+}
+
+.container{ 
+    margin-left: 30px;/* alinhar tudo q ta dentro de container de 1 vez só */
+
+}
+
+.principal .container{ /*apenas o container q esta em filme-principal*/
+    width: 70%;
+}
+
+
+.recomendados{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sessaorecomendados{
+    background-color: black;    
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-size: 2rem; */
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.img-recomendados{
+    width: 95%;
+}
+
+.img-recomendados:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+
+}
+
+.mais-jogados{
+    background-color: black;
+    padding-bottom: 80px;
+}
+
+footer{
+    background-image: url('https://secure-asset-delivery.gameforge.com/partnersite_live_product/d5ef7b41-6294-4e12-b5dd-ea9d333c671e/extras/TERA_GIF1_1556626405.jpg');
+    padding-top: 20px;
+    /* border-top: SOLID rgb(43, 41, 41); */
+    background-size: cover;
+}
+
+.rodape{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media(max-width: 1385px){
+
+    /* .video{
+        width: 1385px;
+        height: 600px;
+    } */
+}
